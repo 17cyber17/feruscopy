@@ -16,16 +16,16 @@ export function Footer() {
               </div>
               <div>
                 <p className="text-lg font-semibold">{siteConfig.name}</p>
-                <p className="text-sm text-slate-400">Industrial storefront foundation</p>
+                <p className="text-sm text-slate-400">Industrial supply storefront</p>
               </div>
             </div>
             <p className="max-w-md text-sm leading-6 text-slate-400">
-              Нейтральная демонстрационная платформа B2B-каталога металлопроката с акцентом на плотную подачу, навигацию и коммерческую структуру.
+              B2B-витрина каталога металлопроката с плотной коммерческой подачей, товарными группами и понятными сценариями поставки.
             </p>
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Навигация</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Навигация</p>
             <ul className="mt-4 space-y-3 text-sm text-slate-300">
               {siteConfig.navigation.map((item) => (
                 <li key={item.href}>
@@ -38,7 +38,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Сервисы</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Сервисы</p>
             <ul className="mt-4 space-y-3 text-sm text-slate-300">
               <li>Резка в размер</li>
               <li>Сборные поставки</li>
@@ -48,7 +48,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Контакты</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Контакты</p>
             <ul className="mt-4 space-y-3 text-sm text-slate-300">
               <li>
                 <a href={`tel:${siteConfig.contacts.phone}`} className="inline-flex items-center gap-2 hover:text-white">

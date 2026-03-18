@@ -17,7 +17,7 @@ export function Header() {
                 <Building2 className="size-5" />
               </div>
               <div>
-                <Link href="/foundation" className="text-lg font-semibold tracking-tight text-foreground">
+                <Link href="/" className="text-lg font-semibold tracking-tight text-foreground">
                   {siteConfig.name}
                 </Link>
                 <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
@@ -47,7 +47,7 @@ export function Header() {
 
           <div className="grid gap-3 lg:grid-cols-[220px_minmax(0,1fr)_auto] lg:items-center">
             <div className="hidden rounded-md border border-border bg-slate-900 px-4 py-3 text-sm font-semibold text-white lg:block">
-              Каталог продукции
+              <Link href="/catalog">Каталог продукции</Link>
             </div>
             <label className="relative block">
               <span className="sr-only">Поиск по каталогу</span>

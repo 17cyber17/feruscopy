@@ -16,7 +16,7 @@ export function CatalogNavigation({ className }: { className?: string }) {
           {categories.map((category) => (
             <li key={category.id}>
               <Link
-                href="#catalog"
+                href={`/catalog/${category.slug}`}
                 className="flex items-center justify-between rounded-xl px-3 py-3 text-sm font-medium text-foreground transition-colors hover:bg-slate-50"
               >
                 <span>{category.name}</span>
