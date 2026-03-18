@@ -1,0 +1,23 @@
+{
+  "name": "feruscopy",
+  "private": true,
+  "packageManager": "pnpm@10.7.0",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "15.2.4",
+    "prettier": "^3.5.3",
+    "@tailwindcss/postcss": "^4.0.15",
+    "tailwindcss": "^4.0.15",
+    "turbo": "^2.4.4",
+    "typescript": "^5.8.2"
+  }
+}
