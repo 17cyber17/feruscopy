@@ -48,8 +48,8 @@ export function ProductPreviewSection() {
 
             return (
               <Card key={product.id} className="overflow-hidden rounded-2xl p-0">
-                <div className="grid gap-0 md:grid-cols-[240px_minmax(0,1fr)]">
-                  <div className="relative min-h-60 bg-slate-200">
+                <div className="grid gap-0 md:grid-cols-[minmax(220px,240px)_minmax(0,1fr)]">
+                  <div className="relative min-h-64 bg-slate-200 md:min-h-full">
                     <Image
                       src={product.image}
                       alt={product.name}
@@ -58,7 +58,7 @@ export function ProductPreviewSection() {
                       sizes="(max-width: 1280px) 100vw, 30vw"
                     />
                   </div>
-                  <div>
+                  <div className="flex min-w-0 flex-col">
                     <CardHeader>
                       <div className="flex flex-wrap gap-2">
                         {product.badges.map((badge) => (
@@ -79,8 +79,8 @@ export function ProductPreviewSection() {
                       </div>
                       <p className="copy-muted">{product.shortDescription}</p>
                     </CardHeader>
-                    <CardContent>
-                      <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 xl:grid-cols-3">
+                    <CardContent className="flex-1">
+                      <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
                         {Object.entries(product.attributes).map(([key, value]) => (
                           <div key={key} className="bg-white px-4 py-3 text-sm">
                             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">{key}</p>
@@ -89,16 +89,20 @@ export function ProductPreviewSection() {
                         ))}
                       </div>
                     </CardContent>
-                    <CardFooter className="items-center justify-between border-t border-slate-100 pt-5">
-                      <div>
+                    <CardFooter className="flex-col items-start justify-between gap-4 border-t border-slate-100 pt-5 lg:flex-row lg:items-end">
+                      <div className="min-w-0">
                         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">Цена</p>
                         <p className="mt-1 text-2xl font-semibold tracking-tight text-foreground">
                           {formatPrice(product.priceFrom, product.unit)}
                         </p>
                       </div>
-                      <div className="flex gap-3">
-                        <Button variant="outline">Характеристики</Button>
-                        <Button variant="accent">Запросить цену</Button>
+                      <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto">
+                        <Button variant="outline" className="w-full sm:w-auto">
+                          Характеристики
+                        </Button>
+                        <Button variant="accent" className="w-full sm:w-auto">
+                          Запросить цену
+                        </Button>
                       </div>
                     </CardFooter>
                   </div>
